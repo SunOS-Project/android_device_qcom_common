@@ -4,6 +4,10 @@ QCOM_COMMON_PATH := device/qcom/common
 PRODUCT_PACKAGES += \
     libcurl
 
+# Linker config
+PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
+    $(LOCAL_PATH)/linker.config.json
+
 # Opt out of 16K alignment changes
 PRODUCT_MAX_PAGE_SIZE_SUPPORTED ?= 4096
 
