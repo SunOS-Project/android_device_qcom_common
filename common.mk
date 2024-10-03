@@ -28,6 +28,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(LOCAL_PATH)/linker.config.json
 
+# System Enable QCOM enhanced feature
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.vendor.qti.va_aosp.support=1
+
 # RFS APQ GNSS symlinks
 PRODUCT_PACKAGES += \
     rfs_apq_gnss_hlos_symlink \
