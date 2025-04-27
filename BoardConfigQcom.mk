@@ -129,7 +129,6 @@ SOONG_CONFIG_qtidisplay += \
     target_uses_aligned_ycrcb_height \
     target_uses_unaligned_nv21_zsl \
     target_uses_unaligned_ycrcb \
-    target_uses_ycrcb_camera_encode \
     target_uses_ycrcb_camera_preview \
     target_uses_ycrcb_venus_camera_preview
 
@@ -155,7 +154,6 @@ SOONG_CONFIG_qtidisplay_target_uses_aligned_ycbcr_height ?= false
 SOONG_CONFIG_qtidisplay_target_uses_aligned_ycrcb_height ?= false
 SOONG_CONFIG_qtidisplay_target_uses_unaligned_nv21_zsl ?= false
 SOONG_CONFIG_qtidisplay_target_uses_unaligned_ycrcb ?= false
-SOONG_CONFIG_qtidisplay_target_uses_ycrcb_camera_encode ?= false
 SOONG_CONFIG_qtidisplay_target_uses_ycrcb_camera_preview ?= false
 SOONG_CONFIG_qtidisplay_target_uses_ycrcb_venus_camera_preview ?= false
 
@@ -194,10 +192,6 @@ endif
 
 ifeq ($(TARGET_USES_UNALIGNED_YCRCB),true)
     SOONG_CONFIG_qtidisplay_target_uses_unaligned_ycrcb := true
-endif
-
-ifeq ($(TARGET_USES_YCRCB_CAMERA_ENCODE),true)
-    SOONG_CONFIG_qtidisplay_target_uses_ycrcb_camera_encode := true
 endif
 
 ifeq ($(TARGET_USES_YCRCB_CAMERA_PREVIEW),true)
