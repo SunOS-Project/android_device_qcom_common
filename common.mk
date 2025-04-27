@@ -1,3 +1,29 @@
+QCOM_COMMON_PATH := device/qcom/common
+
+# GPS
+PRODUCT_PACKAGES += \
+    libcurl
+
+# Opt out of 16K alignment changes
+PRODUCT_MAX_PAGE_SIZE_SUPPORTED ?= 4096
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    device/qcom/qssi/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    device/qcom/qssi/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml \
+    device/qcom/qssi/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
+    device/qcom/qssi/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
+
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    device/qcom/qssi/public.libraries.product-qti.txt:$(TARGET_COPY_OUT_PRODUCT)/etc/public.libraries-qti.txt \
+    device/qcom/qssi/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
+
+# QSPA
+PRODUCT_PACKAGES += \
+    qspa_system.rc \
+    qspa_default.rc
+
 # RFS APQ GNSS symlinks
 PRODUCT_PACKAGES += \
     rfs_apq_gnss_hlos_symlink \
@@ -105,3 +131,11 @@ PRODUCT_PACKAGES += \
     rfs_msm_wpss_readonly_vendor_firmware_symlink \
     rfs_msm_wpss_readwrite_symlink \
     rfs_msm_wpss_shared_symlink
+
+# Vendor Service Manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
+# usbudev service for usb ip assigment
+PRODUCT_PACKAGES += \
+    usbudev
