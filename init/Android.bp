@@ -1,0 +1,15 @@
+soong_namespace {
+}
+
+prebuilt_etc {
+    name: "init.sun.perf.common.rc",
+    src: "init.sun.perf.common.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.sun.perf.common.sh",
+    src: "init.sun.perf.common.sh",
+    vendor: true,
+}

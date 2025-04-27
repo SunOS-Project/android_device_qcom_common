@@ -139,3 +139,6 @@ PRODUCT_PACKAGES += \
 # usbudev service for usb ip assigment
 PRODUCT_PACKAGES += \
     usbudev
+
+# Include QCOM Components.
+include device/qcom/common/components.mk
