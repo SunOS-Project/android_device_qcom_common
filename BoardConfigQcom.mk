@@ -1,5 +1,5 @@
-include hardware/qcom-caf/common/qcom_boards.mk
-include hardware/qcom-caf/common/qcom_defs.mk
+include device/qcom/common/qcom_boards.mk
+include device/qcom/common/qcom_defs.mk
 
 UM_3_18_HAL_FAMILY := msm8996
 UM_4_4_HAL_FAMILY := msm8998
