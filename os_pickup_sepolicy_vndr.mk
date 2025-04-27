@@ -1,4 +1,4 @@
-include hardware/qcom-caf/common/qcom_defs.mk
+include device/qcom/common/qcom_defs.mk
 
 ifneq ($(filter $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
