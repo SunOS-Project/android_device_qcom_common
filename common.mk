@@ -33,6 +33,9 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.vendor.qti.va_aosp.support=1
 
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1
+
 # RFS APQ GNSS symlinks
 PRODUCT_PACKAGES += \
     rfs_apq_gnss_hlos_symlink \
